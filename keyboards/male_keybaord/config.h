@@ -7,10 +7,10 @@
 #define MATRIX_COLS 5
 
 #define DIRECT_PINS { \
-    { GP13, GP28, GP12, GP29, GP0 }, \
-    { GP22, GP14, GP26, GP4,  GP27}, \
-    { GP21, GP23, GP7, GP20, GP6 }, \
-    { GP16, GP9, GP8, NO_PIN, NO_PIN } \
+    { GP0, GP1, GP2, GP3, GP4 }, \
+    { GP5, GP6, GP7, GP8,  GP9 }, \
+    { GP12, GP13, GP14, GP15, GP16 }, \
+    { GP21, GP23, GP20, NO_PIN, NO_PIN } \
 }
 
 #define DIRECT_PINS_RIGHT {  \
@@ -26,7 +26,7 @@
 
 /* Serial Config */
 #define USE_SERIAL
-#define SERIAL_USART_TX_PIN GP1
+#define SERIAL_USART_TX_PIN GP8
 #define MASTER_LEFT
 
 /* I2C Pin mapping */
@@ -55,15 +55,3 @@
 #define TAPPING_TERM 200
 #define PERMISSIVE_HOLD
 #define USB_VBUS_PIN 19
-#define AUDIO_PWM_DRIVER PWMD2
-#define AUDIO_PWM_CHANNEL RP2040_PWM_CHANNEL_B
-#define AUDIO_STATE_TIMER GPTD4
-#define AUDIO_PIN GP5
-#ifdef AUDIO_ENABLE
-    #define AUDIO_INIT_DELAY
-    #define AUDIO_CLICKY
-    #define AUDIO_CLICKY_FREQ_RANDOMNESS 1.0f
-    #define STARTUP_SONG SONG(STARTUP_SOUND)
-#endif
-
-#define STARTUP_SOUND E__NOTE(_E6), E__NOTE(_A6), ED_NOTE(_E7),
