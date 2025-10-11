@@ -1,22 +1,25 @@
-# dasbob
+# male_keybaord-qmk
 
-![alt text](https://github.com/GroooveBob/DASBOB/blob/main/pic/dasbob.png)
+qmk firmware for male_keybaord
 
-DASBOB is a 36-key diodeless split with splay and buzzer.
+![male_keybaord](https://codeberg.org/renaldo/male_keybaord/raw/branch/main/img/male_keybaord.jpg)
 
-* Keyboard Maintainer: [grooovebob](https://github.com/grooovebob)
+* Keyboard repo: https://codeberg.org/renaldo/male_keybaord
 * Hardware Supported: elite c
-* Hardware Availability: https://github.com/GroooveBob/DASBOB
 
-Make example for this keyboard (after setting up your build environment):
+## Usage
 
-    make dasbob:default
+These files were tested with [miryoku](https://github.com/manna-harbour/miryoku) and connecting the left side:
+1. Place files in `keyboards/male_keybaord/` 
+2. Run the following commands to create the firmware for both sides:
+```
+qmk compile -kb male_keybaord/left -km manna-harbour_miryoku
+qmk compile -kb male_keybaord/right -km manna-harbour_miryoku
+```
+3. Enter controller bootloader mode and mount it if it is not automatically
+mounted
+4. Place the corresponding `.uf2` file in mounted volume to flash it
 
-Flashing example for this keyboard:
-
-    make dasbob:default:flash
-
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
 ## Bootloader
 

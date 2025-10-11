@@ -1,0 +1,1 @@
+include keyboards/male_keybaord/rules.mk
