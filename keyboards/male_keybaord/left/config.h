@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../config.h"
+#define SERIAL_USART_TX_PIN GP22
 
 /*LEFT*/  
 #define DIRECT_PINS { \
